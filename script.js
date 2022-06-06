@@ -13,8 +13,24 @@ function computerPlay(){
     return computerChoice;
 }
 
-function playerSelection(){
+function playRound(playerSelection, computerSelection){
 
+}
+
+function playerSelection(){
+    let playerChoice = prompt("Please enter Rock, Paper, or Scissor");
+    playerChoice = playerChoice.toUpperCase();
+    let playerChoiceNumber;
+    if (playerChoice == "ROCK"){
+        playerChoiceNumber = 0;
+    }
+    else if(playerChoice == "PAPER"){
+        playerChoiceNumber = 1;
+    }
+    else if(playerChoice == "SCISSOR"){
+        playerChoiceNumber = 2;
+    }
+    return playerChoiceNumber;
 }
 
 function computerSelection(){
@@ -22,3 +38,4 @@ function computerSelection(){
 }
 
 console.log(computerPlay());
+console.log(playerSelection());
