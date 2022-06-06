@@ -1,6 +1,8 @@
-function computerPlay(){
+function computerSelection(){
     let randomNumber = Math.floor(Math.random() * 3);
-    let computerChoice;
+    let computerChoice = randomNumber;
+    return computerChoice;
+    /*
     if (randomNumber == 0){
         computerChoice = "Rock";
     }
@@ -10,11 +12,8 @@ function computerPlay(){
     else if (randomNumber == 2){
         computerChoice = "Scissor";
     }
-    return computerChoice;
-}
-
-function playRound(playerSelection, computerSelection){
-
+    */
+    
 }
 
 function playerSelection(){
@@ -33,9 +32,26 @@ function playerSelection(){
     return playerChoiceNumber;
 }
 
-function computerSelection(){
-
+function playRound(){
+    let playerChoice = playerSelection();
+    let computerChoice = computerSelection();
+    console.log(playerChoice);
+    console.log(computerChoice);
+    if (playerChoice == 0 && computerChoice == 2){
+        console.log("You win!");
+    }
+    else if (playerChoice == 2 && computerChoice == 0){
+        console.log("You lose!");
+    }
+    else if (playerChoice == computerChoice){
+        console.log("Its a tie!");
+    }
+    else if (playerChoice > computerChoice){
+        console.log("You win!");
+    }
+    else{
+        console.log("You lose!");
+    }
 }
 
-console.log(computerPlay());
-console.log(playerSelection());
+playRound();
